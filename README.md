@@ -11,15 +11,15 @@ A ESPhome External Component Working With HLK-LD2402 Radar Sensor. Tuning with b
 * 对内存有一定需求，建议最低esp32c3使用，并调整看门狗和任务堆大小防止崩溃：
   ```
   esp32:
-  board: esp32-c3-devkitm-1
-  variant: esp32c3
-  framework:
-    type: esp-idf
-    sdkconfig_options:
-      CONFIG_ESP_TASK_WDT_TIMEOUT_S: "30"
-      CONFIG_ESP_INT_WDT_TIMEOUT_MS: "800"
-    advanced:
-      loop_task_stack_size: 10240
+    board: esp32-c3-devkitm-1
+    variant: esp32c3
+    framework:
+      type: esp-idf
+      sdkconfig_options:
+        CONFIG_ESP_TASK_WDT_TIMEOUT_S: "30"
+        CONFIG_ESP_INT_WDT_TIMEOUT_MS: "800"
+      advanced:
+        loop_task_stack_size: 10240
   ```
 * 100% AI Coding
 
