@@ -69,3 +69,7 @@ text_sensor:
       icon: "mdi:cog-play"
       entity_category: "diagnostic"
 ```
+## web调参
+* 访问设备IP:web_port,进入调参界面
+* 实时能量需要先开启工程模式，调试完记得关闭工程模式
+* 任何修改都记得保存到flash来持久化
