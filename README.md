@@ -15,4 +15,57 @@ A ESPhome External Component Working With HLK-LD2402 Radar Sensor. Tuning with b
   <img width="344" height="171" alt="image" src="https://github.com/user-attachments/assets/a772bc08-965b-43f1-9026-e1af5b18d4b0" />
   <img width="315" height="107" alt="image" src="https://github.com/user-attachments/assets/103855b2-38f1-4175-9c6e-4e58c3946b29" />
 * web-gui
-  
+* 
+   <img src="https://github.com/gasment/esphome_hlk_ld2402_with_web_gui_tuning/blob/main/web-gui.webp" />
+
+## 配置示例
+```
+external_components:
+  - source:
+      type: git
+      url: https://github.com/gasment/esphome_hlk_ld2402_with_web_gui_tuning
+      ref: main
+    refresh: always
+
+uart:
+  id: uart_ld2402
+  tx_pin: GPIO6   #your uart tx pin
+  rx_pin: GPIO7  #your uart rx pin
+  baud_rate: 115200
+  parity: NONE
+  stop_bits: 1
+  data_bits: 8  
+
+
+ld2402:
+  id: ld2402_radar
+  uart_id: uart_ld2402
+  web_port: 8080  #set a web-gui port
+  web_username: admin # set a web-gui basic-auth username
+  web_password: admin  # set a web-gui basic-auth password
+
+binary_sensor:
+  - platform: ld2402
+    ld2402_id: ld2402_radar
+    name: "Occupancy"
+    device_class: occupancy
+
+sensor:
+  - platform: ld2402
+    ld2402_id: ld2402_radar
+    distance:
+      name: "Target Distance"
+      filters:
+          - throttle: 2s  
+text_sensor:
+  - platform: ld2402
+    ld2402_id: ld2402_radar
+    firmware_version:
+      name: "LD2402 Firmware"
+      icon: "mdi:chip"
+      entity_category: "diagnostic"
+    work_mode:
+      name: "LD2402 Work Mode"
+      icon: "mdi:cog-play"
+      entity_category: "diagnostic"
+```
