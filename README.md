@@ -4,7 +4,7 @@ ESPHome外部组件-海凌科LD2402雷达传感器，自带web-gui调参
 A ESPhome External Component Working With HLK-LD2402 Radar Sensor. Tuning with build-in web gui
 
 ## 使用说明：
-* 雷达固件版本需高于或等于v3.5.5,使用官方上位机连接到雷达uart来检查固件及ota固件
+* 雷达固件版本需高于或等于v3.3.5,使用官方上位机连接到雷达uart来检查固件及ota固件
 * 仅提供传感器类HA实体(距离、人在、固件版本、工作模式等)，所有调参实体集中到web-gui
 * 没有自动门限生成功能
 * 在esphome 2026.4.5上测试通过
