@@ -25,6 +25,7 @@ external_components:
       type: git
       url: https://github.com/gasment/esphome_hlk_ld2402_with_web_gui_tuning
       ref: main
+    components: [ld2402]
     refresh: always
 
 uart:
