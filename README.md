@@ -8,7 +8,7 @@ A ESPhome External Component Working With HLK-LD2402 Radar Sensor. Tuning with b
 * 仅提供传感器类HA实体(距离、人在、固件版本、工作模式等)，所有调参实体集中到web-gui
 * 没有自动门限生成功能
 * 在esphome 2026.4.5上测试通过
-* 对内存有一定需求，建议最低esp32c3使用，并调整看门狗和任务堆大小防止崩溃：
+* 对内存有一定需求，只支持esp32不支持esp8266
   ```
   esp32:
     board: esp32-c3-devkitm-1
