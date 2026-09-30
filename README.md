@@ -14,7 +14,6 @@ A ESPhome External Component Working With HLK-LD2402 Radar Sensor. Tuning with b
 * 内存与看门狗特殊配置：
   ```
   esp32:
-    board: esp32-c3-devkitm-1
     variant: esp32c3
     framework:
       type: esp-idf
