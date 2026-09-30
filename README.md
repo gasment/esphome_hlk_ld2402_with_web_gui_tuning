@@ -15,7 +15,6 @@ A ESPhome External Component Working With HLK-LD2402 Radar Sensor. Tuning with b
   ```
   esp32:
     variant: esp32c3
-    #toolchain: platformio #esphome 版本>=2026.7.0时配置
     framework:
       type: esp-idf
       sdkconfig_options:
