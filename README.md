@@ -8,7 +8,7 @@ A ESPhome External Component Working With HLK-LD2402 Radar Sensor. Tuning with b
 * 仅提供传感器类HA实体(距离、人在、固件版本、工作模式等)，所有调参实体集中到web-gui
 * 提供http api端点，可使用外部http工具调用
 * 没有自动门限生成功能
-* 在esphome 2026.4.5上测试通过
+* 在esphome 2026.9.0上测试通过，请使用esp-idf toolchain编译
 * 支持多实例，即配置多个ld2402组件。通过id进行区分
 * 对内存与组件库有要求，只支持esp32系列并使用esp-idf框架，不支持esp8266
 * 内存与看门狗特殊配置：
